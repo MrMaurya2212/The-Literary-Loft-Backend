@@ -35,7 +35,7 @@ router.post("/sign-up", async(req,res)=>{
             email: email,
             password: hashpass,
             address: address,
-            avatar:avatar,
+            avatar:"https://cdn-icons-png.flaticon.com/128/3177/3177440.png",
         });
         await newUser.save();
         return res.status(200).json({message:"Sign Up successfull"});
